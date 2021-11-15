@@ -1,6 +1,11 @@
+import React from 'react'
+import Home from "./Components/Home";
+
 function App() {
   return (
-    <h1>hi</h1>
+    <>
+<Home />
+</>
   );
 }
 
