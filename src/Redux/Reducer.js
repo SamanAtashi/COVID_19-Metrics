@@ -1,20 +1,19 @@
 export const DISPLAY = '/display';
 
 export const fetchToDisplay = () => async (dispach) => {
-  const todaydate = new Date().toISOString().slice(0, 10);
   const data = await fetch(
-    `https://api.covid19tracking.narrativa.com/api/${todaydate}`,
+    'https://corona.lmao.ninja/v2/continents?yesterday=true&sort',
   );
   const temp = await data.json();
 
-  dispach({ type: DISPLAY, payload: temp });
+  return dispach({ type: DISPLAY, payload: temp });
 };
 
 const initialState = [];
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case (DISPLAY):
-      return [...state, action.payload.dates];
+      return [...state, ...action.payload];
 
     default:
       return state;
