@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
 import './index.css';
+import { Provider } from 'react-redux';
 import App from './App';
-import store from './Redux/configureStore';
-import { fetchToDisplay } from './Redux/Reducer';
+
+import { fetchToDisplay } from './Redux/reducer';
+import store from './Redux/configStore';
 
 store.dispatch(fetchToDisplay());
 

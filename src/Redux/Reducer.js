@@ -10,9 +10,10 @@ export const fetchToDisplay = () => async (dispach) => {
 };
 
 const initialState = [];
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case (DISPLAY):
+    case DISPLAY:
       return [...state, ...action.payload];
 
     default:
