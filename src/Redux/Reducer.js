@@ -1,20 +1,28 @@
-export const DISPLAY = '/display';
+export const CONTINENTS = '/continents';
+export const COUNTRIES = '/countries';
 
-export const fetchToDisplay = () => async (dispach) => {
-  const data = await fetch(
-    'https://corona.lmao.ninja/v2/continents?yesterday=true&sort',
-  );
+export const fetchContinents = () => async (dispach) => {
+  const data = await fetch('https://disease.sh/v3/covid-19/continents');
   const temp = await data.json();
 
-  return dispach({ type: DISPLAY, payload: temp });
+  return dispach({ type: CONTINENTS, payload: temp });
 };
 
-const initialState = [];
+export const fetchCountries = () => async (dispach) => {
+  const data = await fetch('https://disease.sh/v3/covid-19/countries');
+  const temp = await data.json();
+
+  return dispach({ type: COUNTRIES, payload: temp });
+};
+
+const initialState = { continents: [], countries: [] };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case DISPLAY:
-      return [...state, ...action.payload];
+    case CONTINENTS:
+      return { ...state, continents: [...action.payload] };
+    case COUNTRIES:
+      return { ...state, countries: [...action.payload] };
 
     default:
       return state;
