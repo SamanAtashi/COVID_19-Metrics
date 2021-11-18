@@ -11,7 +11,11 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  Link, Routes, Route, useNavigate,
+  Link,
+  Routes,
+  Route,
+  useNavigate,
+  useLocation,
 } from 'react-router-dom';
 import Countries from './Countries/Countries';
 import { fetchCountries } from '../Redux/reducer';
@@ -23,14 +27,8 @@ const Continents = (props) => {
     dispatch(fetchCountries());
   }, []);
 
-  const { name: continentIamAt } = props;
-
-  const bringBackHandler = () => {
-    const temp = continentIamAt.split(' ').join('%20');
-    return navigate('Asia');
-  };
-
   // ! ----------------------------------------------------
+  const { name: continentIamAt } = props;
 
   const mystore = useSelector((state) => state);
 
@@ -84,8 +82,22 @@ const Continents = (props) => {
     );
   });
 
+  const { pathname } = useLocation();
+
+  let url = '';
+  continentIamAt.split(' ').length > 1
+    ? (url = continentIamAt.split(' ').join('%20'))
+    : (url = continentIamAt);
+
+  // ! ----------------------------------------------------
+
   return (
     <div className="border border-red-500">
+      {
+(pathname === `/${url}`)
+
+  ? (
+    <div>
       <p>------------</p>
       <form>
         <label htmlFor="filtering">Sort by:</label>
@@ -101,15 +113,14 @@ const Continents = (props) => {
         </select>
       </form>
       <p>------------</p>
-      <button
-        type="button"
-        onClick={() => bringBackHandler()}
-      >
+      <button type="button" onClick={() => navigate('/')}>
         Back
       </button>
       <p>------------</p>
       {newList.length > 0 ? countriesLI() : <p>loading</p>}
-
+    </div>
+  ) : null
+}
       <Routes>
         {newList.length > 0 ? countriesRoute() : null}
       </Routes>
