@@ -39,11 +39,11 @@ const Home = () => {
         key={continents[0].continent}
       >
         <img
-          className="object-cover w-full h-full bg-white opacity-50"
+          className="continentWhiteImg"
           alt="NorthAmerica"
           src={NorthAmerica}
         />
-        <p className="absolute top-0 left-0 text-black w-full h-full bg-primary ">
+        <p className="continentWhiteText">
           {continents[0].continent}
         </p>
       </Link>
@@ -53,11 +53,11 @@ const Home = () => {
         key={continents[1].continent}
       >
         <img
-          className="object-cover w-full h-full bg-white filter grayscale opacity-50"
+          className="continentWhiteImg"
           alt="Asia"
           src={Asia}
         />
-        <p className="absolute top-0 left-0 text-black w-full h-full bg-secondary">
+        <p className="continentBlackText">
           {continents[1].continent}
         </p>
       </Link>
@@ -67,11 +67,11 @@ const Home = () => {
         key={continents[2].continent}
       >
         <img
-          className="object-cover w-full h-full bg-white filter grayscale"
+          className="continentWhiteImg"
           alt="SouthAmerica"
           src={SouthAmerica}
         />
-        <p className="absolute top-0 left-0 text-black">
+        <p className="continentBlackText">
           {continents[2].continent}
         </p>
       </Link>
@@ -81,11 +81,11 @@ const Home = () => {
         key={continents[3].continent}
       >
         <img
-          className="object-cover w-full h-full bg-white filter grayscale"
+          className="continentWhiteImg"
           alt="Europe"
           src={Europe}
         />
-        <p className="absolute top-0 left-0 text-black">
+        <p className="continentWhiteText">
           {continents[3].continent}
         </p>
       </Link>
@@ -95,11 +95,11 @@ const Home = () => {
         key={continents[4].continent}
       >
         <img
-          className="object-cover w-full h-full bg-white filter grayscale"
+          className="continentWhiteImg"
           alt="Africa"
           src={Africa}
         />
-        <p className="absolute top-0 left-0 text-black">
+        <p className="continentWhiteText">
           {continents[4].continent}
         </p>
       </Link>
@@ -108,12 +108,8 @@ const Home = () => {
         to={continents[5].continent}
         key={continents[5].continent}
       >
-        <img
-          className="object-cover w-full h-full bg-white filter grayscale"
-          alt="AO"
-          src={AO}
-        />
-        <p className="absolute top-0 left-0 text-black">
+        <img className="continentWhiteImg" alt="AO" src={AO} />
+        <p className="continentBlackText">
           {continents[5].continent}
         </p>
       </Link>
@@ -124,8 +120,8 @@ const Home = () => {
     <div className="ring-4 ring-black ring-offset-2 ring-offset-pink-300 rounded-xl h-mydisplay w-96 shadow-2xl">
       {pathname === '/' ? (
         <div className="w-full h-full">
-          <h1 className="w-full h-1/6 text-center align-middle text-2xl font-bold">
-            Welcome to Covid-Today
+          <h1 className="w-full h-1/6 text-2xl font-bold center">
+            <span className="shadow-sm">Welcome to Covid-Today</span>
           </h1>
           <div className="w-full h-5/6">
             {continents.length > 1 ? (

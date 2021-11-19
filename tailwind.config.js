@@ -12,8 +12,7 @@ module.exports = {
       },
       backgroundColor: (theme) => ({
         ...theme('colors'),
-        primary: 'rgba(236, 72, 153,0.1)',
-        secondary: 'rgba(131, 24, 67,0.1)',
+        secondary: 'rgba(0, 0, 0,0.1)',
       }),
     },
   },
