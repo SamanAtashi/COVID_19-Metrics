@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Covid-Today
+Covid-Today is a React application that receives daily covid statistics from all countries, and you can check to see the latest data.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Homepage View                                  |  Single Country View                              |
+:------------------------------------------------:|:-----------------------------------------------:
+![](./src/Assets/Screenshot1.png)                 |  ![](./src/Assets/Screenshot2.png)             | 
 
-## Available Scripts
+## Online versions
+- [Netlify]()
 
-In the project directory, you can run:
+## Breif descrption video
+- [Video]()
 
-### `npm start`
+## Built With
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React / Redux
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## How to run the program locally
+- Clone the project: ```https://github.com/SamanAtashi/COVID_19-Metrics.git```
+- Skip if you already have node installed otherwise download [nodejs](https://nodejs.org/en/download/) install it on your system
+- Install the node modules: ```npm install```
+- Run the app: ```npm start``` or ```yarn start```
 
-### `npm test`
+## How to run the test
+- Clone the project: ```https://github.com/SamanAtashi/COVID_19-Metrics.git```
+- Skip if you already have node installed otherwise download [nodejs](https://nodejs.org/en/download/) install it on your system
+- Install the node modules: ```npm install```
+- Run the app: ```npm test``` or ```yarn test```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Author
 
-### `npm run build`
+👤 **Saman Atashi**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Twitter: [@AtashiSaman](https://twitter.com/AtashiSaman)
+- GitHub: [@SamanAtashi](https://github.com/SamanAtashi)
+- LinkedIn: [@saman-atashi](https://www.linkedin.com/in/saman-atashi/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🤝 Contributing
 
-### `npm run eject`
+Contributions, issues, and feature requests are welcome!
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Feel free to check the [issues page](../../issues/).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Show your support
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Give a ⭐️ if you like this project!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgments
+- microverseinc for the readme template
+- [Creative Common License of design](https://creativecommons.org/licenses/by-nc/4.0/)
+- Original Design by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
+- [Teleport Api](https://teleport.org/)

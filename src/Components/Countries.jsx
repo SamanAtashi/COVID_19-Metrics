@@ -23,7 +23,7 @@ const Countries = (props) => {
   };
 
   return (
-    <div className=" w-full h-full">
+    <div className=" w-full h-full overflow-hidden">
       <button
         className="flex items-center hover:text-black transition duration-500 ease-in-out pl-2 "
         type="button"
