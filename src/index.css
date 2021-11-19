@@ -6,6 +6,11 @@
 /* stylelint-disable-next-line scss/at-rule-no-unknown */
 @tailwind utilities;
 
+*::selection {
+  background-color: black;
+  color: #ec4899;
+}
+
 .center {
   @apply flex flex-col justify-center items-center;
 }

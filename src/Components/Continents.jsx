@@ -17,7 +17,9 @@ import {
   useNavigate,
   useLocation,
 } from 'react-router-dom';
-import Countries from './Countries/Countries';
+import { MdAdsClick } from 'react-icons/md';
+import { IoArrowBack } from 'react-icons/io5';
+import Countries from './Countries';
 import { fetchCountries } from '../Redux/reducer';
 
 const Continents = (props) => {
@@ -66,8 +68,20 @@ const Continents = (props) => {
   // ! ----------------------------------------------------
 
   const countriesLI = () => newList.map((item) => (
-    <Link to={item.country} key={item.country}>
-      {item.country}
+    <Link
+      to={item.country}
+      key={item.country}
+      className="relative"
+    >
+      <img
+        className="continentWhiteImg"
+        alt={item.country}
+        src={item.countryInfo.flag}
+      />
+      <p className="continentWhiteText flex items-center justify-between px-1">
+        {item.country}
+        <MdAdsClick />
+      </p>
     </Link>
   ));
 
@@ -92,35 +106,50 @@ const Continents = (props) => {
   // ! ----------------------------------------------------
 
   return (
-    <div className="border border-red-500">
-      {
-(pathname === `/${url}`)
-
-  ? (
-    <div>
-      <p>------------</p>
-      <form>
-        <label htmlFor="filtering">Sort by:</label>
-        <select
-          name="filtering"
-          id="filtering"
-          onChange={(e) => sortingHandler(e.target.value)}
-        >
-          <option>Nothing</option>
-          <option value="population">Population</option>
-          <option value="deaths">Deaths</option>
-          <option value="recovered">Recovered</option>
-        </select>
-      </form>
-      <p>------------</p>
-      <button type="button" onClick={() => navigate('/')}>
-        Back
-      </button>
-      <p>------------</p>
-      {newList.length > 0 ? countriesLI() : <p>loading</p>}
-    </div>
-  ) : null
-}
+    <div className="w-full h-full pt-2 overflow-y-scroll scrollbar-hide">
+      {pathname === `/${url}` ? (
+        <div className="grid grid-cols-2">
+          <div className="col-span-2 flex items-center justify-between px-2 pb-2">
+            <button
+              className="flex items-center hover:text-black transition duration-500 ease-in-out"
+              type="button"
+              onClick={() => navigate('/')}
+            >
+              <IoArrowBack />
+              Back
+            </button>
+            <form>
+              <label htmlFor="filtering">
+                Sort by:
+              </label>
+              <select
+                className="bg-transparent"
+                name="filtering"
+                id="filtering"
+                onChange={(e) => sortingHandler(
+								    e.target.value,
+								  )}
+              >
+                <option>Nothing</option>
+                <option value="population">
+                  Population
+                </option>
+                <option value="deaths">
+                  Deaths
+                </option>
+                <option value="recovered">
+                  Recovered
+                </option>
+              </select>
+            </form>
+          </div>
+          {newList.length > 0 ? (
+            countriesLI()
+          ) : (
+            <p>loading</p>
+          )}
+        </div>
+      ) : null}
       <Routes>
         {newList.length > 0 ? countriesRoute() : null}
       </Routes>

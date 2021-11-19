@@ -21,16 +21,6 @@ const Home = () => {
   const continents = useSelector((state) => state.continents);
   const { pathname } = useLocation();
 
-  //   const myLinks = () => continents.map((item) => (
-  //     <Link
-  //       className="w-full"
-  //       to={item.continent}
-  //       key={item.continent}
-  //     >
-  //       {item.continent}
-  //     </Link>
-  // 						  ));
-
   const myLinks2 = () => (
     <div className="w-full h-full grid grid-cols-2 justify-between items-end">
       <Link
@@ -121,7 +111,9 @@ const Home = () => {
       {pathname === '/' ? (
         <div className="w-full h-full">
           <h1 className="w-full h-1/6 text-2xl font-bold center">
-            <span className="shadow-sm">Welcome to Covid-Today</span>
+            <span className="shadow-sm">
+              Welcome to Covid-Today
+            </span>
           </h1>
           <div className="w-full h-5/6">
             {continents.length > 1 ? (
@@ -132,7 +124,8 @@ const Home = () => {
           </div>
         </div>
       ) : null}
-      <div>
+      {continents.length > 1 ? (
+
         <Routes>
           <Route
             path="Asia/*"
@@ -150,22 +143,23 @@ const Home = () => {
             path="North%20America/*"
             element={
               <Continents name="North America" />
-						}
+							}
           />
           <Route
             path="South%20America/*"
             element={
               <Continents name="South America" />
-						}
+							}
           />
           <Route
             path="Australia-Oceania/*"
             element={
               <Continents name="Australia-Oceania" />
-						}
+							}
           />
         </Routes>
-      </div>
+
+      ) : null}
     </div>
   );
 };
