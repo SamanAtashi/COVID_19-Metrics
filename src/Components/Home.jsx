@@ -9,12 +9,12 @@ import {
   Route,
   useLocation,
 } from 'react-router-dom';
-import Africa from './Assets/Africa.png';
-import Asia from './Assets/Asia.jpeg';
-import AO from './Assets/Australia-Oceania.jpeg';
-import Europe from './Assets/Europe.jpeg';
-import NorthAmerica from './Assets/North America.jpeg';
-import SouthAmerica from './Assets/South America.jpeg';
+import Africa from '../Assets/Africa.png';
+import Asia from '../Assets/Asia.jpeg';
+import AO from '../Assets/Australia-Oceania.jpeg';
+import Europe from '../Assets/Europe.jpeg';
+import NorthAmerica from '../Assets/North America.jpeg';
+import SouthAmerica from '../Assets/South America.jpeg';
 import Continents from './Continents';
 
 const Home = () => {
