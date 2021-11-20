@@ -9,7 +9,7 @@ Homepage View                                  |  Single Country View           
 - [Netlify](https://covidtoday.netlify.app/)
 
 ## Breif descrption video
-- [Video]()
+- [Video](https://drive.google.com/file/d/197a2i7Q4jMp6KXDPFSomVKYueukGqw1L/view?usp=sharing)
 
 ## Built With
 
