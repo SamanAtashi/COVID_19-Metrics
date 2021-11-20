@@ -1,13 +1,3 @@
-/* eslint-disable no-plusplus */
-/* eslint-disable no-unused-vars */
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable no-unused-expressions */
-/* eslint-disable no-undef */
-/* eslint-disable no-tabs */
-/* eslint-disable no-mixed-spaces-and-tabs */
-/* eslint-disable max-len */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -19,6 +9,7 @@ import {
 } from 'react-router-dom';
 import { MdAdsClick } from 'react-icons/md';
 import { IoArrowBack } from 'react-icons/io5';
+import PropTypes from 'prop-types';
 import Countries from './Countries';
 import { fetchCountries } from '../myredux/myreducer';
 
@@ -50,19 +41,23 @@ const Continents = (props) => {
   useEffect(() => {
     const occupied = [];
     const data = mystore.countries;
-    for (let i = 0; i < countriesIamAt.length; i++) {
-      for (let j = 0; j < data.length; j++) {
+    for (let i = 0; i < countriesIamAt.length; i += 1) {
+      for (let j = 0; j < data.length; j += 1) {
         if (countriesIamAt[i] === data[j].country) {
           occupied.push(data[j]);
         }
       }
     }
-    (occupied.length > 0) ? setNewList([...occupied]) : null;
+    if (occupied.length > 0) {
+      setNewList([...occupied]);
+    }
   }, [mystore]);
 
   const sortingHandler = (value) => {
     const sortedArr = newList.sort((a, b) => b[value] - a[value]);
-    newList.length > 0 ? setNewList([...sortedArr]) : null;
+    if (newList.length > 0) {
+      setNewList([...sortedArr]);
+    }
   };
 
   // ! ----------------------------------------------------
@@ -99,9 +94,11 @@ const Continents = (props) => {
   const { pathname } = useLocation();
 
   let url = '';
-  continentIamAt.split(' ').length > 1
-    ? (url = continentIamAt.split(' ').join('%20'))
-    : (url = continentIamAt);
+  if (continentIamAt.split(' ').length > 1) {
+    (url = continentIamAt.split(' ').join('%20'));
+  } else {
+    (url = continentIamAt);
+  }
 
   // ! ----------------------------------------------------
 
@@ -119,16 +116,14 @@ const Continents = (props) => {
               Back
             </button>
             <form>
-              <label htmlFor="filtering">
+              <span htmlFor="filtering">
                 Sort by:
-              </label>
+              </span>
               <select
                 className="bg-transparent"
                 name="filtering"
                 id="filtering"
-                onChange={(e) => sortingHandler(
-								    e.target.value,
-								  )}
+                onChange={(e) => sortingHandler(e.target.value)}
               >
                 <option>Nothing</option>
                 <option value="population">
@@ -155,6 +150,10 @@ const Continents = (props) => {
       </Routes>
     </div>
   );
+};
+
+Continents.propTypes = {
+  name: PropTypes.string.isRequired,
 };
 
 export default Continents;

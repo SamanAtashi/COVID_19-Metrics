@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-mixed-spaces-and-tabs */
-/* eslint-disable no-tabs */
 import React from 'react';
 import { useSelector } from 'react-redux';
 import {
@@ -116,8 +113,7 @@ const Home = () => {
             </span>
           </h1>
           <div className="w-full h-5/6">
-            {continents.length > 1 ? (
-						  myLinks2()
+            {continents.length > 1 ? (myLinks2()
             ) : (
               <p>loading</p>
             )}
@@ -143,19 +139,19 @@ const Home = () => {
             path="North%20America/*"
             element={
               <Continents name="North America" />
-							}
+}
           />
           <Route
             path="South%20America/*"
             element={
               <Continents name="South America" />
-							}
+}
           />
           <Route
             path="Australia-Oceania/*"
             element={
               <Continents name="Australia-Oceania" />
-							}
+}
           />
         </Routes>
 
