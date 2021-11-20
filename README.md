@@ -6,7 +6,7 @@ Homepage View                                  |  Single Country View           
 ![](./src/Assets/Screenshot1.png)                 |  ![](./src/Assets/Screenshot2.png)             | 
 
 ## Online versions
-- [Netlify]()
+- [Netlify](https://covidtoday.netlify.app/)
 
 ## Breif descrption video
 - [Video]()
