@@ -5,8 +5,8 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
-import { fetchContinents } from './Redux/reducer';
-import store from './Redux/configStore';
+import { fetchContinents } from './myredux/myreducer';
+import store from './myredux/configStore';
 
 store.dispatch(fetchContinents());
 

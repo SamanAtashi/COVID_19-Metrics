@@ -1,6 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
-import reducer from './reducer';
+import reducer from './myreducer';
+
+// const reducer = {
+//   myreducer,
+// };
 
 const store = configureStore({
   reducer,

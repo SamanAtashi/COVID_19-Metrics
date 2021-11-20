@@ -20,7 +20,7 @@ import {
 import { MdAdsClick } from 'react-icons/md';
 import { IoArrowBack } from 'react-icons/io5';
 import Countries from './Countries';
-import { fetchCountries } from '../Redux/reducer';
+import { fetchCountries } from '../myredux/myreducer';
 
 const Continents = (props) => {
   const navigate = useNavigate();
