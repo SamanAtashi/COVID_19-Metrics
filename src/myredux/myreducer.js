@@ -5,14 +5,16 @@ export const fetchContinents = () => async (dispach) => {
   const data = await fetch('https://disease.sh/v3/covid-19/continents');
   const temp = await data.json();
 
-  return dispach({ type: CONTINENTS, payload: temp });
+  dispach({ type: CONTINENTS, payload: temp });
+  return temp;
 };
 
 export const fetchCountries = () => async (dispach) => {
   const data = await fetch('https://disease.sh/v3/covid-19/countries');
   const temp = await data.json();
 
-  return dispach({ type: COUNTRIES, payload: temp });
+  dispach({ type: COUNTRIES, payload: temp });
+  return temp;
 };
 
 const initialState = { continents: [], countries: [] };

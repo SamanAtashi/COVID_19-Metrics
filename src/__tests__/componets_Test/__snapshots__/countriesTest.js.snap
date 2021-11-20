@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className=" w-full h-full overflow-hidden"
+>
+  <button
+    className="flex items-center hover:text-black transition duration-500 ease-in-out pl-2 "
+    onClick={[Function]}
+    type="button"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 512 512"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M244 400L100 256l144-144M120 256h292"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="48"
+      />
+    </svg>
+    Back
+  </button>
+  <div
+    className="w-full h-full center"
+  />
+</div>
+`;
