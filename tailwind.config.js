@@ -1,4 +1,5 @@
-/* eslint-disable global-require */
+const temp = require('tailwind-scrollbar-hide');
+
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
@@ -20,5 +21,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require('tailwind-scrollbar-hide')],
+  plugins: [temp],
 };
