@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="ring-4 ring-black ring-offset-2 ring-offset-pink-300 rounded-xl h-mydisplay w-96 shadow-2xl"
+>
+  <div
+    className="w-full h-full"
+  >
+    <h1
+      className="w-full h-1/6 text-2xl font-bold center"
+    >
+      <span
+        className="shadow-sm"
+      >
+        Welcome to Covid-Today
+      </span>
+    </h1>
+    <div
+      className="w-full h-5/6"
+    >
+      <p>
+        loading
+      </p>
+    </div>
+  </div>
+</div>
+`;
